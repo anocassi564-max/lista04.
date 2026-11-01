@@ -1,123 +1,131 @@
-# Lista 04 — CSS Flexbox (Parte 2)
+ Lista 04 - 2
 
-Respostas do estudo dirigido de CSS Flexbox (parte 2), da disciplina Desenvolvimento Web I.
+ 1. Revisão da parte 1
 
-## Respostas
+1. O contêiner é o elemento pai e os itens são os elementos dentro dele. O `display: flex` é colocado no contêiner.
 
-> **Atenção:** substitua os espaços abaixo pelas respostas que você já elaborou. Nas questões de cálculo, inclua os passos; nas questões de múltipla escolha, justifique a alternativa escolhida.
+2. O eixo principal é horizontal, da esquerda para a direita.
 
-### Questão 01
+ 2. Crescer: flex-grow
 
-_resposta aqui_
+3. É o espaço que sobra no contêiner. Se todos tiverem `flex-grow: 0`, ninguém ocupa esse espaço.
 
-### Questão 02
+4. O valor padrão é 0, ou seja, o item não cresce.
 
-_resposta aqui_
+5. Mesa: contêiner. Prato: item. Sobra: espaço livre. Peso: valor do `flex-grow`.
 
-### Questão 03
+6. Usar `flex-grow: 1` no elemento da marca.
 
-_resposta aqui_
+7.
+- Soma: 2 + 3 + 1 = 6.
+- Cada parte: 600 ÷ 6 = 100px.
+- Primeiro: 200px.
+- Segundo: 300px.
+- Terceiro: 100px.
 
-### Questão 04
+8.
+- Espaço ocupado: 300px.
+- Sobra: 300px.
+- Primeiro: 100px.
+- Segundo: 200px.
+- Terceiro: 300px.
 
-_resposta aqui_
+ 3. Encolher: flex-shrink
 
-### Questão 05
+9. Entra em ação quando falta espaço. O valor padrão é 1.
 
-_resposta aqui_
+10.
+- Espaço ocupado: 800px.
+- Falta: 200px.
+- Primeiro item: 300px.
+- Segundo item: 300px.
 
-### Questão 06
+11.
+- Primeiro item: 400px.
+- Segundo item: 200px.
+- Sim, cabe nos 600px.
 
-_resposta aqui_
+12. Um menu lateral pode usar `flex-shrink: 0` para não diminuir de tamanho.
 
-### Questão 07
+4. Tamanho de partida e atalho flex
 
-_resposta aqui_
+13. `flex-basis` define o tamanho inicial do item. Nesse caso, vale 10rem (160px, considerando 1rem = 16px).
 
-### Questão 08
+14. Porque os itens começam com tamanho zero e dividem todo o espaço disponível.
 
-_resposta aqui_
+15.
+- `flex: initial` = grow 0, shrink 1, basis auto.
+- `flex: 1` = grow 1, shrink 1, basis 0%.
+- `flex: auto` = grow 1, shrink 1, basis auto.
+- `flex: none` = grow 0, shrink 0, basis auto.
 
-### Questão 09
+16.
 
-_resposta aqui_
+Com `flex: 1`:
+- Primeiro: 300px.
+- Segundo: 300px.
 
-### Questão 10
+Com `flex: auto`:
+- Primeiro: 200px.
+- Segundo: 400px.
 
-_resposta aqui_
+Os resultados diferem porque `flex: 1` começa com base zero, enquanto `flex: auto` considera o tamanho do conteúdo.
 
-### Questão 11
+17. Verdadeiro, pois, com conteúdos iguais e mesmas condições, os itens recebem a mesma quantidade de espaço.
 
-_resposta aqui_
+ 5. O mínimo que trava o encolhimento
 
-### Questão 12
+18. A propriedade é `min-width: auto`. Para resolver, usamos `min-width: 0`.
 
-_resposta aqui_
+19. Quando um texto possui palavras muito longas e ultrapassa o espaço disponível ao lado do menu.
 
-### Questão 13
+6. order e align-self
 
-_resposta aqui_
+20.
 
-### Questão 14
+a) C, A, B.
 
-_resposta aqui_
+b) A, B, C.
 
-### Questão 15
+c) Porque a ordem visual pode ser diferente da ordem de navegação, causando confusão para quem usa leitores de tela.
 
-_resposta aqui_
+21. O valor padrão é 0. O elemento com `order: -1` aparece primeiro.
 
-### Questão 16
+22.
+- `align-self: flex-end`: alinha o item ao final.
+- `align-self: auto`: utiliza o alinhamento definido pelo pai.
 
-_resposta aqui_
+23. `align-items` alinha todos os itens, enquanto `align-self` alinha apenas um item.
 
-### Questão 17
+ 7. A página com miolo
 
-_resposta aqui_
+24.
+- `.pagina`: header, miolo e footer.
+- `.miolo`: aside e main.
 
-### Questão 18
+25. Porque `.miolo` precisa organizar seus próprios elementos, o menu e o conteúdo, lado a lado.
 
-_resposta aqui_
+26.
+- `display: flex`: ativa o Flexbox.
+- `flex-direction: column`: organiza os elementos em coluna.
+- `min-height: 100vh`: ocupa pelo menos a altura da tela.
+- `.miolo { display: flex; }`: organiza o menu e o conteúdo.
+- `flex: 1`: ocupa o espaço restante.
+- `aside { flex: 0 0 10rem; }`: mantém a largura do menu fixa.
+- `main { flex: 1; }`: ocupa o espaço restante.
+- `min-width: 0`: permite que o conteúdo diminua.
 
-### Questão 19
+ 8. Erros comuns e síntese
 
-_resposta aqui_
+27. O erro é colocar `flex-grow` no contêiner. O correto é aplicar nos elementos filhos.
 
-### Questão 20
+28.
+1. Usar `min-width: 0` para permitir que o item diminua.
+2. Usar `flex-wrap: wrap` para passar os itens para outra linha.
 
-_resposta aqui_
-
-### Questão 21
-
-_resposta aqui_
-
-### Questão 22
-
-_resposta aqui_
-
-### Questão 23
-
-_resposta aqui_
-
-### Questão 24
-
-_resposta aqui_
-
-### Questão 25
-
-_resposta aqui_
-
-### Questão 26
-
-_resposta aqui_
-
-### Questão 27
-
-_resposta aqui_
-
-### Questão 28
-
-_resposta aqui_
-
-### Questão 29
-
-_resposta aqui_
+29.
+- `flex-basis`: define o tamanho inicial.
+- `flex-grow`: controla o crescimento.
+- `flex-shrink`: controla o encolhimento.
+- `order`: define a ordem visual.
+- `align-self`: define o alinhamento individual.
